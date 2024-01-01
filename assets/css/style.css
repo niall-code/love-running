@@ -1,23 +1,18 @@
-/* Google Fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-/* Override default styles */
+/* Page's general styles */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
-/* General styles */
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* Generic project styles */
   font-family: 'Lato', sans-serif;
   color: #3a3a3a;
 }
-
 h1, h2, h3 {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
@@ -25,7 +20,7 @@ h1, h2, h3 {
   color: #252525;
 }
 
-/* Header */
+/* Header's general styles */
 header {
   background-color: white;
   padding: 0 1rem;
@@ -37,27 +32,12 @@ header {
   justify-content: space-between;
   align-items: baseline;
 }
-
 header a {
   text-decoration: none;
   color: inherit;
 }
 
-#menu {
-  font-size: 110%;
-  letter-spacing: 4px;
-  list-style-type: none;
-}
-
-#menu > li {
-  margin-bottom: 1em;
-}
-
-.active {
-  border-bottom: 1px solid #3a3a3a;
-}
-
-/* Navbar styles with dropdown toggle */
+/* Navbar styles */
 nav {
   position: absolute;
   left: 0;
@@ -68,35 +48,40 @@ nav {
   display: none;
   top: 100%;
 }
-
-/* Navbar toggle */
+#menu {
+  font-size: 110%;
+  letter-spacing: 4px;
+  list-style-type: none;
+}
+#menu > li {
+  margin-bottom: 1em;
+}
+.active {
+  border-bottom: 1px solid #3a3a3a;
+}
 #nav-toggle:checked~nav {
   display: block;
 }
-
 #nav-toggle {
   display: none;
 }
-
 .nav-toggle-label {
   font-size: 2rem;
 }
 
-/* Main content */
+/* <main> element styles */
 main {
-  /* Fill surplus space, push footer down */
   flex: 1 0 auto;
   margin-top: 47px;
 }
 
-/* Hero section */
+/* Hero image/cover text styles */
 #hero {
   height: 600px;
   width: 100%;
   background: lightblue url("../images/hero-image.webp") center center/cover no-repeat;
   position: relative;
 }
-
 #cover-text {
   background-color: rgba(241, 109, 107, 0.7);
   font-size: 130%;
@@ -106,12 +91,33 @@ main {
   min-height: 200px;
   padding: 40px 0 0 10px;
 }
-
 #cover-text > h2, #cover-text > h3 {
   color: white;
 }
 
-/* Footer */
+/* Persuasive content section styles */
+#reasons {
+  width: 90%;
+  margin: 20px auto;
+}
+h2 {
+  text-align: center;
+  font-size: 280%;
+  margin-bottom: 20px;
+}
+#benefits div {
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+#benefits hr {
+  border-top: 1px solid #3a3a3a;
+  margin: 5px 0;
+}
+#benefits p {
+  padding: 0 20px;
+}
+
+/* Social media links styles */
 #social-media {
   text-align: center;
   padding: 20px 0;
@@ -119,7 +125,6 @@ main {
   justify-content: space-evenly;
   list-style-type: none;
 }
-
 #social-media i {
   font-size: 160%;
   padding: 5%;
@@ -128,7 +133,15 @@ main {
 
 /* Media query: tablet */
 @media screen and (min-width: 768px) {
-  /* Header */
+
+  /* Logo styles */
+  #logo {
+    font-size: 280%;
+    line-height: 75px;
+    margin: 0 0.5rem;
+  }
+
+  /* Navbar styles */
   nav {
     display: block;
     position: relative;
@@ -136,31 +149,22 @@ main {
     width: fit-content;
     padding-right: 1rem;
   }
-
   #menu {
     display: flex;
   }
-
   #menu > li {
     padding-left: 1rem;
   }
-
   .nav-toggle-label {
     display: none;
   }
 
-  #logo {
-    font-size: 280%;
-    line-height: 75px;
-    margin: 0 0.5rem;
-  }
-
-  /* Main content */
+  /* <main> element styles */
   main {
     margin-top: 79px;
   }
 
-  /* Hero */
+  /* Hero image cover text styles */
   #cover-text {
     width: 300px;
     right: 50px;
@@ -169,6 +173,8 @@ main {
 
 /* Media query: laptop */
 @media screen and (min-width: 992px) {
+  
+  /* Navbar styles */
   #menu a:hover {
     border-bottom: 1px solid #3a3a3a;
   }
