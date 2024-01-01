@@ -211,3 +211,28 @@ main {
     border-bottom: 1px solid #3a3a3a;
   }
 }
+
+/* Media query: desktop, or larger laptop */
+@media screen and (min-width: 1200px) {
+
+  /* Persuasive content section styles */
+  #benefits {
+    display: flex;
+    flex-direction: row;
+  }
+  #benefits > div {
+    flex: 1;
+  }
+  #benefits-image {
+    order: 0;
+  }
+  #benefits-mental {
+    order: 1;
+  }
+  #benefits-mental > div {
+    align-self: flex-start;
+  }
+  #benefits-physical > div {
+    align-self: flex-end;
+  }
+}
