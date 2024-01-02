@@ -136,6 +136,39 @@ main {
   max-width: 300px;
 }
 
+/* Meetup times section */
+#times {
+  background: url("../images/dublin-city.webp") no-repeat center/cover;
+  display: flex;
+  flex-wrap: wrap;
+}
+#times div {
+  color: #fafafa;
+  background-color: rgba(0, 0, 0, .6);
+  padding: 15px;
+  text-align: center;
+
+  /* This will not wrap on screens of less than 400px wide.
+  Each div will expand to fill the available space on its row */
+  flex-basis: 200px;
+  flex-grow: 1;
+
+  /* Creates a grid of meetup time divs over the background image */
+  border: 2px solid white;
+}
+#times h3 {
+  color: #fafafa;
+}
+
+/* Gallery page styles */
+#photos img {
+  width: 100%;
+  line-height: 1em;
+}
+#photos {
+  line-height: 0;
+}
+
 /* Social media links styles */
 #social-media {
   text-align: center;
@@ -148,6 +181,16 @@ main {
   font-size: 160%;
   padding: 5%;
   color: #3a3a3a;
+}
+
+/* Media query: large or landscape phones */
+@media screen and (min-width: 576px) {
+
+  /* Gallery page styles */
+  #photos {
+    column-count: 2;
+    column-gap: 0;
+  }
 }
 
 /* Media query: tablet */
@@ -204,30 +247,11 @@ main {
     text-align: end;
     align-self: flex-end;
   }
-}
 
-/* Meetup times section */
-#times {
-  background: url("../images/dublin-city.webp") no-repeat center/cover;
-  display: flex;
-  flex-wrap: wrap;
-}
-#times div {
-  color: #fafafa;
-  background-color: rgba(0, 0, 0, .6);
-  padding: 15px;
-  text-align: center;
-
-  /* This will not wrap on screens of less than 400px wide.
-  Each div will expand to fill the available space on its row */
-  flex-basis: 200px;
-  flex-grow: 1;
-
-  /* Creates a grid of meetup time divs over the background image */
-  border: 2px solid white;
-}
-#times h3 {
-  color: #fafafa;
+  /* Gallery page styles */
+  #photos {
+    column-count: 3;
+  }
 }
 
 /* Media query: laptop */
@@ -236,6 +260,11 @@ main {
   /* Navbar styles */
   #menu a:hover {
     border-bottom: 1px solid #3a3a3a;
+  }
+
+  /* Gallery page styles */
+  #photos {
+    column-count: 4;
   }
 }
 
